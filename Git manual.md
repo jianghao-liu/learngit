@@ -184,6 +184,21 @@ git log --graph
 ### 小技巧
 ##### 忽略文件 .gitignore
 把某些Git工作目录中的文件，不能提交它们，比如保存了数据库密码的配置文件，每次git status都会提醒，这时候，在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去。
+###### 只对还没有加进git库的文件有效，对于git中存在的文件，需要首先删除它
+```
+//创建.gitignore文件
+touch .gitignore
+//修改
+vim .gitignore
+
+#为注释 – 将被 Git 忽略
+*.a       # 忽略所有 .a 结尾的文件
+!lib.a    # 但 lib.a 除外
+/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+build/    # 忽略 build/ 目录下的所有文件
+doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+```
+
 ```
 # Windows:
 Thumbs.db
