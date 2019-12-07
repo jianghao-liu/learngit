@@ -4,12 +4,15 @@
 git clone http://..git
 //修改文件,新建的文件夹里要有文件
 git add -A
+
+如果报错无法连接 -> git init
 // git status 查看更新状态
 git commit -m "modifier xxx"
 //第一次push要先关联github并且登陆。 git remote add origin http://..git
 // git pull origin master 先pull避免冲突
 git push origin master
 ```
+
 
 
 
